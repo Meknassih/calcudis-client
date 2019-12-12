@@ -1,7 +1,9 @@
-import { goTo, setCookie, deleteCookie } from './utility.js';
+import { getCookie, goTo } from './utility.js';
+const token = getCookie('token');
+if (!token)
+  goTo('');
+
 $(function () {
-  // TODO: REMOVE THIS LINE AFTER DEV v
-  deleteCookie('token');
   $('input#signin').on('click', (e) => {
     $.ajax({
       method: 'POST',
@@ -16,7 +18,8 @@ $(function () {
     }).then(({ token }) => {
       console.log(token);
       setCookie('token', token, 24);
-      goTo('dashboard.html');
+      console.log('http://' + window.location.host + '/dashboard.html');
+      // window.location = 'http://' + window.location.host + '/dashboard.html';
     });
   });
 });

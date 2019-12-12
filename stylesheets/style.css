@@ -10,3 +10,16 @@ a {
 #formError {
   color: red;
 }
+
+#actionBar {
+  padding: 8px;
+  text-align: center;
+}
+
+#statusBar {
+  font-weight: bold;
+  text-align: center;
+  border: silver solid 2px;
+  padding: 8px;
+  border-radius: 8px;
+}

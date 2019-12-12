@@ -27,3 +27,7 @@ export function deleteCookie(cname) {
   const expires = 'expires=' + d.toUTCString();
   document.cookie = cname + '=' + ';' + expires + ';path=/';
 }
+
+export function goTo(path) {
+  window.location = 'http://' + window.location.host + '/' + path;
+}
