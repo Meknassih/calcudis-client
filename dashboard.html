@@ -12,12 +12,18 @@
   <h1>Calcudis Client</h1>
   <h2>Dashboard</h2>
   <div id="actionBar">
+    <button id="newBatch">New batch</button>
     <button id="abort">Abort</button>
     <button id="redo">Redo this batch</button>
     <button id="signout">Sign out</button>
+    <label for="automode">
+      <input type="checkbox" name="automode" id="automode">
+      Auto-request new batches
+    </label>
   </div>
   <div id="statusBar">
-    <p>IDLE</p>
+    <p id="connection" class="danger">DISCONNECTED</p>
+    <p id="status">IDLE</p>
   </div>
 </body>
 
