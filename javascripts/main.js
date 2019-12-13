@@ -2,6 +2,7 @@ import { goTo, setCookie, deleteCookie } from './utility.js';
 $(function () {
   // TODO: REMOVE THIS LINE AFTER DEV v
   deleteCookie('token');
+
   $('input#signin').on('click', (e) => {
     $.ajax({
       method: 'POST',
